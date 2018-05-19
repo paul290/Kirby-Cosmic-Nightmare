@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <style>
+            body{
+                padding: 0;
+            }
+            #player {
+                position:absolute; 
+                bottom: 50px;
+            }
+            .platform {
+                height: 50px;
+                width: 1000000000000000000px;
+                background-color: green;
+                position:absolute;
+                bottom: 0;
+            }
+            .background{
+                background-image: url(Green_Greens_1.png);
+                height: 100vh;
+                background-size: 311.111111111vh;
+            }
+        </style>
+        <script>
+            var x=0
+            function move(event){
+                var player=document.getElementById('player')
+                console.log(event.key)
+                if (event.key == 'ArrowRight') {
+                   x=x+50 
+                }
+                if (event.key == 'ArrowLeft') {
+                    x=x-50
+                }
+                player.style.left = x
+            }
+            document.onkeydown=move
+        </script>
+    </head>
+    <body>
+        <div class="background">
+            
+        </div>
+        <img id="player" src="kirby.gif">
+        <div class="platform">
+            
+        </div>
+    </body>
+</html>
